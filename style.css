@@ -74,6 +74,13 @@ img {
   line-height: 2;
 }
 
+.text--white {
+  font-size: 1rem;
+  line-height: 2;
+  color: #FFFFFF;
+  font-weight: bold;
+}
+
 .text-foreground {
   padding: 1.5rem;
   background-color: #FFFFFF;
