@@ -3,7 +3,8 @@
   padding: 0;
   list-style: none;
   box-sizing: border-box;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
 }
 
 html {
@@ -35,7 +36,7 @@ html {
   --base-color: #FFFFFF;
   --shadow-color: rgba(0, 0, 0, 0.15);
   --text-color-main: #333333;
-  --main-background: #f3f3f3;
+  --main-background: #afe6cd;
 }
 
 /* GENERAL-STYLES */
@@ -56,6 +57,7 @@ img {
   position: relative;
   z-index: 1;
   margin-bottom: 3rem;
+  font-weight: bolder;
 }
 
 .section-title::after {
@@ -87,6 +89,61 @@ img {
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.15);
 }
 
+.icon-text-container {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  margin: 2rem 0;
+}
+
+.icon-text-container > p {
+  font-size: 1rem;
+}
+
+.icon {
+  max-width: 1.5rem;
+}
+
+.call-buttons-area {
+  display: flex;
+  gap: 1rem;
+  width: 100%;
+}
+
+.call-buttons-area a {
+  text-decoration: none;
+  display: block;
+  width: 100%;
+}
+
+.button-call {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: .5rem;
+  width: 100%;
+  padding: .5rem;
+  margin: 1rem 0;
+  background-color: #5b8eda;
+  color: white;
+  font-weight: 500;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.button-call.whatsapp {
+  background-color: #24CC63;
+}
+
+.hamburger-menu-wrapper {
+  display: none;
+}
+
+/* .hide-menu {
+  display: none !important;
+} */
+
 /* HEADER */
 .header {
   box-shadow: 0 2px 5px var(--shadow-color);
@@ -116,16 +173,11 @@ img {
 }
 
 .email-link {
-  font-weight: bold;
   color: var(--base-color);
 }
 
-.email-link:visited {
+.email-link:is(:active, :hover, :visited) {
   color: var(--base-color);
-}
-
-.email-link:is(:active, :hover) {
-  color: #000000;
 }
 
 .contact-header-area__social-media {
@@ -159,6 +211,7 @@ img {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
 }
 
 .nav-items-wrapper {
@@ -166,6 +219,7 @@ img {
   justify-content: center;
   align-items: center;
   gap: 1.5rem;
+  transition: 300ms ease-out;
 }
 
 .nav-items-wrapper > li {
@@ -212,38 +266,42 @@ img {
 
 /* MAIN */
 .main {
-  background-color: var(--main-background);
+  background-image: linear-gradient(to bottom, var(--main-background), white);
 }
 
 .content-guide-line {
   position: absolute;
-  top: 30px;
+  top: 26px;
   left: 50%;
   transform: translateX(-50%);
-  width: 5rem;
+  width: 9rem;
+  transform: rotate(90deg) translatey(70px);
+  transform-origin: center;
 }
 
 .content-guide-line > img {
-  width: 16px;
+  width: 20px;
   margin: 0 auto;
 }
 
 .content-guide-line--last {
   position: absolute;
-  bottom: 20px;
+  bottom: 16px;
   left: 50%;
   transform: translateX(-50%);
+  transform: rotate(90deg) translatey(50px);
+  transform-origin: center;
   width: 5rem;
 }
 
 .content-guide-line--last > img {
-  width: 16px;
+  width: 20px;
   margin: 0 auto;
 }
 
 .section-content {
   height: 100%;
-  padding-top: 135px;
+  padding-top: 120px;
   position: relative;
 }
 
@@ -286,9 +344,9 @@ img {
 .text-mark-highlight {
   background-color: transparent;
   /* padding: 0 .5rem; */
-  color: rgba(74, 201, 180, .7);
+  color: rgb(45, 175, 154);
   font-weight: bolder;
-  font-size: 1.25rem;
+  font-size: 1.1rem;
 }
 
 .main-title {
@@ -338,6 +396,27 @@ img {
   height: 25rem;
 }
 
+.badges-area {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+.badges-area > li {
+  padding: .5rem;
+  font-size: 1rem;
+  border: 3px solid var(--main-color);
+  color: var(--main-color);
+  font-weight: bold;
+  transition: 300ms ease-in-out;
+}
+
+.badges-area > li:hover {
+  background-color: var(--main-color);
+  color: white;
+}
+
 /* FOOTER */
 .footer {
   background-image: linear-gradient(to right, var(--main-color), var(--secondary-color));
@@ -373,7 +452,7 @@ img {
   background-color: rgba(0, 0, 0, 0.1);
   position: fixed;
   right: 1.8rem;
-  bottom: 5.7rem;
+  bottom: 6.7rem;
   display: flex;
   justify-content: center;
   padding-top: .95rem;
@@ -395,7 +474,7 @@ img {
 
 /* WHATSAPP LOGO */
 .whatsapp-container {
-  max-width: 3rem;
+  max-width: 4rem;
   cursor: pointer;
   position: fixed;
   right: 1.5rem;
@@ -431,7 +510,7 @@ img {
 }
 
 .whatsapp-container > a:hover {
-  animation: shakeIcon 500ms ease-in-out forwards;
+  animation: shakeIcon 800ms ease-in-out forwards;
 }
 
 @keyframes shakeIcon {
@@ -453,6 +532,44 @@ img {
 }
 
 @media (max-width: 620px) {
+
+  .hamburger-menu-wrapper {
+    display: block;
+    position: absolute;
+    right: 15px;
+    top: 40px;
+    cursor: pointer;
+  }
+
+  .hamburger-menu {
+    display: block;
+    background-color: var(--main-color);
+    width: 1.8rem;
+    height: 5px;
+    position: relative;
+  }
+
+  .hamburger-menu::before {
+    content: '';
+    display: block;
+    background-color: var(--main-color);
+    width: 1.8rem;
+    height: 5px;
+    position: absolute;
+    left: 0;
+    top: -8px;
+  }
+
+  .hamburger-menu::after {
+    content: '';
+    display: block;
+    background-color: var(--main-color);
+    width: 1.8rem;
+    height: 5px;
+    position: absolute;
+    top: 8px;
+  }
+
   .main-title {
     font-size: 1.5rem;
   }
@@ -484,8 +601,7 @@ img {
   }
 
   .nav-items-wrapper {
-    padding-top: .5rem;
-    border-top: 2px solid var(--main-color);
+    gap: 0;
   }
 
   .nav-items-wrapper > li {
@@ -498,7 +614,7 @@ img {
   }
 
   .section-content {
-    padding-top: 150px;
+    padding-top: 140px;
   }
 
   .text, .email-link, .text--white, .text-mark-highlight {
@@ -506,19 +622,36 @@ img {
   }
 
   .content-guide-line {
-    top: 30px;
+    top: -4px;
   }
 
   .content-guide-line > img {
-    width: 15px;
+    width: 25px;
   }
 
   .content-guide-line--last {
-    bottom: 20px;
+    bottom: -4px;
   }
 
   .content-guide-line--last > img {
-    width: 15px;
+    width: 25px;
+  }
+
+  .badges-area {
+    display: block;
+    text-align: center;
+  }
+  
+  .badges-area > li {
+    margin-bottom: 1rem;
+  }
+
+  .call-buttons-area {
+    display: block;
+  }
+
+  .hide-menu {
+    display: none !important;
   }
 }
 

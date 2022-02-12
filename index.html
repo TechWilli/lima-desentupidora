@@ -35,7 +35,10 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="style.css">
   <script src="./script.js" defer></script>
 </head>
@@ -46,21 +49,9 @@
     <div class="container">
       <div class="contact-header-area__wrapper">
         <div class="contact-header-area__phone-email">
-          <div class="contact-container">
-            <div class="contact-icon-wrapper">
-              <img src="./assets/icons/phone-icon.svg" alt="ícone de telefone">
-            </div>
-            <a class="email-link" href="tel:5513996255448">+55 13 99625-5448</a>
-          </div>
-          <div class="contact-container">
-            <div class="contact-icon-wrapper">
-              <img src="./assets/icons/email-icon.svg" alt="ícone de email">
-            </div>
-            <a class="email-link" href="mailto:limadesentupidoraonline@gmail.com?subject=[INSIRA O ASSUNTO AQUI]&body=[INSIRA A MENSAGEM AQUI]" target="_blank">limadesentupidoraonline@gmail.com</a>
-          </div>
         </div>
         <div class="contact-header-area__social-media">
-          <p class="text--white">Atendemos em todo o litoral de São Paulo!</p>
+          <p class="text--white">Atendemos todo o litoral de São Paulo!</p>
           <!-- <div class="contact-icon-wrapper">
             <img src="./assets/icons/facebook2-icon.svg" alt="ícone do facebook">
           </div> -->
@@ -70,12 +61,15 @@
   </div>
   <header class="header">
     <nav class="container nav-menu">
+      <div class="hamburger-menu-wrapper">
+        <span class="hamburger-menu"></span>
+      </div>
       <div class="logo-container">
-        <h1 title="logo Lima Desentupidora">
+        <h1 title="logo Lima Desentupidora" onclick="goToTop()" style="cursor: pointer">
           <img src="./assets/images/logo-lima-desentupidora.PNG" alt="logo marca Lima Desentupidora">
         </h1>
       </div>
-      <ul class="nav-items-wrapper">
+      <ul class="nav-items-wrapper hide-menu">
         <li><a href="#section-desentupidora">Desentupidora</a></li>
         <li><a href="#section-sobre">Sobre nós</a></li>
         <li><a href="#section-contatos">Contatos</a></li>
@@ -87,13 +81,51 @@
     <div class="container">
       <section id="section-home" class="section-content">
         <!-- <h2 class="section-title">Início</h2> -->
-        <div class="background-image-container">
-          <!-- <h1 class="main-title">Lima Desentupidora</h1> -->
-          <p class="text background-image-container__text">
-            Somos a <mark class="text-mark-highlight">Lima Desentupidora</mark>, <mark class="text-mark-highlight">especializados em desentupimento</mark> de:
-            <mark class="text-mark-highlight">pias, ralos, vasos sanitários, esgotos, caixas de gordura</mark>.
-            Fazemos <mark class="text-mark-highlight">hidrojateamento, esgotamento de fossas</mark> e mais.
+        <div class="text-foreground">
+          <p class="text">
+            Somos a <mark class="text-mark-highlight">Lima Desentupidora</mark>, especializados em desentupimento de:
           </p>
+          <ul class="badges-area">
+            <li>pias</li>
+            <li>ralos</li>
+            <li>vasos sanitários</li>
+            <li>esgotos</li>
+            <li>caixas de gordura</li>
+          </ul>
+          <p class="text">Também realizamos os serviços de:</p>
+          <ul class="badges-area">
+            <li>hidrojateamento</li>
+            <li>esgotamento de fossas</li>
+          </ul>
+
+          <div class="icon-text-container">
+            <img class="icon" src="./assets/icons/credit-card.svg" alt="ícone pagamento em cartão de crédito">
+            <p class="text">Aceitamos cartão de débito. Parcelamos em até <mark class="text-mark-highlight">10x</mark> em qualquer <mark class="text-mark-highlight">cartão de crédito</mark>.</p>
+          </div>
+          <div class="icon-text-container">
+            <img class="icon" src="./assets/icons/clock-time.png" alt="ícone pagamento em cartão de crédito">
+            <p class="text">Atendimento <mark class="text-mark-highlight">24h</mark></p>
+          </div>
+          <div class="icon-text-container">
+            <img class="icon" src="./assets/icons/check-icon.png" alt="ícone pagamento em cartão de crédito">
+            <p class="text"><mark class="text-mark-highlight">Visita gratuita</mark> e serviço com <mark class="text-mark-highlight">garantia de 90 dias</mark></p>
+          </div>
+
+          <div class="call-buttons-area">
+            <a href="tel:5513996255448">
+              <button class="button-call">
+                <img class="icon" src="./assets/icons/phone-icon.svg" alt="ícone de telefone">
+                Ligue agora: +55 13 99625-5448
+              </button>
+            </a>
+
+            <a class="whatsapp-send-message" target="_blank">
+              <button class="button-call whatsapp">
+                <img class="icon" src="./assets/icons/whatsapp-logo-outline.svg" alt="ícone de telefone">
+                Nos chame no Whatsapp!
+              </button>
+            </a>
+          </div>
         </div>
       </section>
 
@@ -148,7 +180,7 @@
           <p class="text">Nosso whatsapp:</p>
           <span><a class="email-link" style="color: #000000;" href="tel:5513996255448">+55 13 99625-5448</a></span>
           <p class="text" ;>Nosso e-mail:</p>
-          <span><a class="email-link" style="color: #000000;" href="mailto:limadesentupidoraonline@gmail.com?subject=[INSIRA O ASSUNTO AQUI]&body=[INSIRA A MENSAGEM AQUI]" target="_blank">limadesentupidoraonline@gmail.com</a></span>
+          <span><a class="email-link" style="color: #000000; word-break: break-word;" href="mailto:limadesentupidoraonline@gmail.com?subject=[INSIRA O ASSUNTO AQUI]&body=[INSIRA A MENSAGEM AQUI]" target="_blank">limadesentupidoraonline@gmail.com</a></span>
           <p class="text" style="margin-top: 2rem">
             <mark class="text-mark-highlight">Atendemos em todo o litoral de São Paulo</mark>.
             Nós vamos até você, prestamos serviço para: <mark class="text-mark-highlight">residências, comércios e indústrias</mark>.
@@ -166,8 +198,8 @@
     <div class="scroll-to-top-icon"></div>
   </button>
   <!-- WHATSAPP FLOATING LOGO -->
-  <div class="whatsapp-container">
-    <a id="whatsapp-send-message" target="_blank">
+  <div class="whatsapp-container" onclick="handleWhatsappClick()">
+    <a class="whatsapp-send-message" target="_blank">
       <img src="./assets/icons/whatsapp-icon.svg" alt="whatsapp logo para contato">
     </a>
   </div>
