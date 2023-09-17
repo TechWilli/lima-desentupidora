@@ -195,53 +195,157 @@ img {
 
 /* MAIN */
 
-.content-guide-line {
+#section-home {
+  background-color: var(--main-color);
+}
+
+#section-home p {
+  color: white;
+}
+
+#section-sobre {
+  background-color: var(--main-color);
+  padding: 5rem 0;
+  color: white;
+}
+
+#section-sobre .title {
+  font-size: 3rem;
+  padding-bottom: 2rem;
+  color: white;
+  font-weight: bold;
+}
+
+.about-us-wrapper {
+  display: flex;
+  gap: 4rem;
+}
+
+.rounded-image {
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+  width: 500px;
+  height: 500px;
+}
+
+.rounded-image > img {
   position: absolute;
-  top: 26px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 9rem;
-  transform: rotate(90deg) translatey(70px);
-  transform-origin: center;
+  object-fit: cover;
+  height: 100%;
 }
 
-.content-guide-line > img {
-  width: 20px;
-  margin: 0 auto;
+.about-us-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  line-height: 1.5rem;
+  flex-basis: 50%;
 }
 
-.content-guide-line--last {
-  position: absolute;
-  bottom: 16px;
-  left: 50%;
-  transform: translateX(-50%);
-  transform: rotate(90deg) translatey(50px);
-  transform-origin: center;
-  width: 5rem;
+.title-container {
+  background-color: #e6b427;
+  padding: 1rem;
+  border-radius: 8px;
+  max-width: 28rem;
+  text-align: center;
 }
 
-.content-guide-line--last > img {
-  width: 20px;
-  margin: 0 auto;
+.title-container > p {
+  color: #085a84 !important;
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+.home-layout {
+  display: flex;
+  gap: 4rem;
+}
+
+.home-image-container {
+  border-radius: 10px;
+  position: relative;
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+}
+
+.text-container {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  align-items: center;
+}
+
+.text-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.home-image-container > img {
+  object-fit: cover;
+  height: 500px;
 }
 
 .section-content {
   height: 100%;
-  padding-top: 120px;
   position: relative;
 }
 
 .section-content:first-child {
-  padding-top: 0;
+  padding-top: 56px;
+  padding-bottom: 56px;
 }
 
 .section-content:last-child {
   padding-bottom: 160px;
 }
 
+.our-services-wrapper .title {
+  font-size: 3rem;
+  font-weight: bolder;
+  color: white;
+  text-align: center;
+}
+
+.our-services {
+  margin-top: 4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+}
+
+.budget-area {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 2rem;
+  align-items: center;
+  line-height: 1.8rem;
+}
+
+.budget-area > h2 {
+  font-size: 3rem;
+  font-weight: 600;
+}
+
+.budget-area > p:last-of-type {
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
 .background-image-container {
-  background: url("./assets/images/desentupindo-vaso-sanitario.jpeg") no-repeat
-    center center;
+  background: url("./assets/images/desentupindo-esgoto.jpeg") no-repeat center
+    center;
   background-size: cover;
   width: 100%;
   height: 34rem;
@@ -256,49 +360,9 @@ img {
 .background-image-container::before {
   content: "";
   position: absolute;
-  background-color: #000000;
+  background-color: #000000cd;
   inset: 0;
   opacity: 0.65;
-}
-
-.background-image-container__text {
-  font-size: 1.3rem;
-  color: #ffffff;
-  position: relative;
-  text-align: center;
-}
-
-.text-mark-highlight {
-  background-color: transparent;
-  /* padding: 0 .5rem; */
-  color: rgb(45, 175, 154);
-  font-weight: bolder;
-  font-size: 1.1rem;
-}
-
-.main-title {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-  background-color: var(--secondary-color);
-  padding: 1rem;
-  position: relative;
-}
-
-.cards-area {
-  margin-top: 1rem;
-  display: flex;
-  gap: 1rem;
-}
-
-.cards-area > div {
-  flex: 1;
-  border-top: 10px solid var(--main-color);
-}
-
-.card-title {
-  font-weight: bold;
-  display: block;
-  margin-bottom: 1rem;
 }
 
 .img-desentupidora-section-container {
