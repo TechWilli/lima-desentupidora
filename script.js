@@ -5,6 +5,14 @@ const navMenu = document.querySelector('.menu-warpper');
 const navbar = document.querySelector('.navbar');
 const contactMeInside = document.querySelector('.contact-me-inside');
 const contactMeOurside = document.querySelector('.contact-me-outside');
+const sectionDesentupidora = document.querySelector(".our-services-wrapper");
+const sectionSobre = document.querySelector(".about-us-wrapper");
+const sectionContatos = document.getElementById("section-contatos");
+const servicesMenuItem = document.querySelector('.services-menu-item');
+const aboutMenuItem = document.querySelector('.about-menu-item');
+const contactMenuItem = document.querySelector('.contact-menu-item');
+const header = document.querySelector('.nav-menu');
+
 
 // trick to remove the url hash
 function removeHashFromUrl() {
@@ -32,15 +40,16 @@ function goToTop() {
   removeHashFromUrl();
 }
 
-// on button click its returns to the top of page
-backToTopButton.addEventListener('click', goToTop);
-
-hamburgerMenu.addEventListener('click', () => {
-  console.log('clicou');
+function triggerMenuBehavior() {
   navMenu.classList.toggle('hide-menu');
   contactMeInside.classList.toggle('hide-contact-me-inside');
   hamburgerMenu.classList.toggle('hamburger-menu-close');
-})
+}
+
+// on button click its returns to the top of page
+backToTopButton.addEventListener('click', goToTop);
+
+hamburgerMenu.addEventListener('click', triggerMenuBehavior)
 
 window.addEventListener('resize', () => {
   if (window.innerWidth < 620) {
@@ -52,6 +61,12 @@ window.addEventListener('resize', () => {
 
   }
 })
+
+
+servicesMenuItem.addEventListener('click', triggerMenuBehavior)
+aboutMenuItem.addEventListener('click', triggerMenuBehavior)
+contactMenuItem.addEventListener('click', triggerMenuBehavior)
+
 
 window.onload = () => {
   if (window.innerWidth < 620) {
